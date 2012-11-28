@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="1" name="cokeProxy">
+    <ConfigurationVersion minorVersion="0" majorVersion="4"/>
+    <CreatedAt>1346170560567</CreatedAt>
+    <CreatedBy>orgAdmin</CreatedBy>
+    <Description></Description>
+    <DisplayName>GoogleMap</DisplayName>
+    <LastModifiedAt>1346170560567</LastModifiedAt>
+    <LastModifiedBy>orgAdmin</LastModifiedBy>
+    <Policies>
+        <Policy>ApikeyValidation</Policy>
+        <Policy>AssignMessage</Policy>
+        <Policy>AuditLogging</Policy>
+        <Policy>Delete.Cache.Control.Headers</Policy>
+        <Policy>JsonpCallback</Policy>
+        <Policy>JsonToXML</Policy>
+        <Policy>OAuthV2</Policy>
+        <Policy>Pagination</Policy>
+        <Policy>Ratelimiting.Developer.Quotas</Policy>
+        <Policy>ResponseCache</Policy>
+        <Policy>ResponseStripping</Policy>
+        <Policy>RewriteVersionTarget</Policy>
+        <Policy>ServiceCallout</Policy>
+        <Policy>SetResources</Policy>
+        <Policy>SpikeArrest</Policy>
+        <Policy>SQL.threat.protection</Policy>
+        <Policy>Versioning</Policy>
+        <Policy>XMLResponseEnrichment</Policy>
+        <Policy>XML.threat.protection</Policy>
+        <Policy>XMLToJSON</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+         <Resource>xsl://pagination.xsl</Resource>
+         <Resource>js://JsonpCallback.js</Resource>
+         <Resource>js://SetResource.js</Resource>
+         <Resource>js://ResponseStripping.xsl</Resource>
+         <Resource>js://RewriteVersionTarget</Resource>
+         <Resource>xsl://Versioning.xsl</Resource>
+         <Resource>js://XMLResponseEnrichment.js</Resource>
+    </Resources>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>

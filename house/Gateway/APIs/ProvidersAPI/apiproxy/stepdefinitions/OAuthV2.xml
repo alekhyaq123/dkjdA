@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OAuthV2 enabled="true" continueOnError="false" async="false" name="OAuthV2">
+    <DisplayName>OAuth v2.0 Policy</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <Operation>VerifyAccessToken</Operation>
+    <SupportedGrantTypes/>
+</OAuthV2>

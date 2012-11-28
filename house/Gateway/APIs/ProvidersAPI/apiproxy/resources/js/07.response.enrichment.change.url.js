@@ -1,0 +1,1 @@
+url= flow.getVariable("target.url")+"/"+flow.getVariable("request.queryparam.category")+"/"+flow.getVariable("request.queryparam.filterType")+"/"+flow.getVariable("request.queryparam.geoCode")+"/"+flow.getVariable("request.queryparam.noOfItems");flow.setVariable("target.url",url);

@@ -1,0 +1,11 @@
+<MessageLogging name="AuditLogging">
+    <File>
+        <Message>The API Poduct For the API Key : {apiproduct.name}</Message>
+        <FileName>APIAudit.log</FileName>
+        <FileRotationOptions rotateFileOnStartup="true">
+            <FileRotationType>SIZE</FileRotationType>
+            <MaxFileSizeInMB>10</MaxFileSizeInMB>
+            <MaxFilesToRetain>10</MaxFilesToRetain>
+        </FileRotationOptions>
+    </File>
+</MessageLogging>

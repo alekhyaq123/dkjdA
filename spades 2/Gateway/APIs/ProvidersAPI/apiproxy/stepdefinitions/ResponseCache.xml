@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ResponseCache enabled="true" continueOnError="false" async="false" name="ResponseCache">
+    <FaultRules/>
+    <Properties/>
+    <CacheKey>
+        <Prefix>Apigee</Prefix>
+        <KeyFragment ref="request.uri"></KeyFragment>
+        <KeyFragment ref="request.queryparam.address"></KeyFragment>
+        <KeyFragment ref="request.queryparam.sensor"></KeyFragment>
+    </CacheKey>
+    <CacheResource>FCacheResource</CacheResource>
+    <Scope>Global</Scope>
+    <ExpirySettings>
+        <TimeoutInSec>100000</TimeoutInSec>
+    </ExpirySettings>
+</ResponseCache>

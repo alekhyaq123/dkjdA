@@ -1,0 +1,1 @@
+flow.setVariable("flow.resource.name",flow.getVariable("proxy.pathsuffix"));

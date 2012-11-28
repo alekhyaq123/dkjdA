@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage enabled="true" continueOnError="false"
+	async="false" name="Delete.Cache.Control.Headers">
+	<FaultRules />
+	<Properties />
+	<Remove>  
+		<Headers>
+			<Header name="Expires" />
+			<Header name="Cache-Control" />
+		</Headers>
+	</Remove>
+	<IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+	<AssignTo createNew="false" transport="http" type="response"></AssignTo>
+</AssignMessage>

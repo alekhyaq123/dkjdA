@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Script enabled="true" continueOnError="false" async="false" name="RewriteVersionTarget">
+    <FaultRules/>
+    <Properties/>
+    <ResourceURL>js://RewriteVersionTarget.js</ResourceURL>
+</Script>

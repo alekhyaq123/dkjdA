@@ -1,0 +1,16 @@
+<JSONToXML name="JsonToXML">
+
+    <Options>
+        <InvalidCharsReplacement>_</InvalidCharsReplacement>
+        <TextNodeName>#text</TextNodeName>
+        <NullValue>I_AM_NULL</NullValue>        
+        <AttributeBlockName>#attrs</AttributeBlockName>
+        <AttributePrefix>@</AttributePrefix>
+        <NamespaceBlockName>#namespaces</NamespaceBlockName>
+        <DefaultNamespaceNodeName>$default</DefaultNamespaceNodeName>
+        <NamespaceSeparator>:</NamespaceSeparator>
+        <ArrayRootElementName>Array</ArrayRootElementName>
+        <ArrayItemElementName>Item</ArrayItemElementName>
+
+    </Options>
+</JSONToXML>

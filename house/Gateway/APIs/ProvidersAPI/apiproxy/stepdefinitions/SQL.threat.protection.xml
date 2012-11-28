@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RegularExpressionProtection enabled="true" continueOnError="fasle" async="false" name="SQL.threat.protection">
+    <FaultRules/>
+    <Properties/>
+    <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+    <URIPath>
+        <Pattern ignoreCase="false">[tT]rue</Pattern>
+        <Pattern ignoreCase="false">.*true.*</Pattern>
+    </URIPath>
+    <QueryParam name="threat">
+        <Pattern ignoreCase="false">[tT]rue</Pattern>
+        <Pattern ignoreCase="false">.*true.*</Pattern>
+    </QueryParam>
+    <Header name="threat">
+        <Pattern ignoreCase="false">[tT]rue</Pattern>
+        <Pattern ignoreCase="false">.*true.*</Pattern>
+    </Header>
+    <Variable name="request.queryparam.threat">
+        <Pattern ignoreCase="false">[tT]rue</Pattern>
+        <Pattern ignoreCase="false">.*true.*</Pattern>
+        <Pattern ignoreCase="false">[\s]*((delete)|(exec)|(drop\s*table)|(insert)|(shutdown)|(update)|(or))</Pattern>
+    </Variable>
+    <Source>request</Source>
+</RegularExpressionProtection>

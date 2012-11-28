@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TargetEndpoint name="default">
+    <Description>Apigee auto generated target endpoint</Description>
+    <FaultRules/>
+      <Flows>
+	    <Flow name="resource1">
+			<Condition>(proxy.pathsuffix /~ &quot;/resource1&quot;)</Condition>
+			<Description/>
+			<Request>
+				<Step>
+					<FaultRules/>
+					<Name>RewriteTarget</Name>
+				</Step>
+			</Request>
+			<Response/>	
+		</Flow>
+		<Flow name="v2/resource1">
+			<Condition>(proxy.pathsuffix /~ &quot;/v2/resource1&quot;)</Condition>
+			<Description/>
+			<Request>
+				<Step>
+					<FaultRules/>
+					<Name>RewriteVersionTarget</Name>
+				</Step>
+			</Request>
+			<Response/>	
+		</Flow>
+	</Flows>
+    <HTTPTargetConnection>
+        <Properties/>
+        <URL>http://api.coke.com</URL>
+    </HTTPTargetConnection>
+</TargetEndpoint>

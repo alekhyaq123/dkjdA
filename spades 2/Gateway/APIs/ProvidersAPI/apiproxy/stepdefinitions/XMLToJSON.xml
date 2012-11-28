@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<XMLToJSON enabled="true" continueOnError="false" async="false" name="XMLToJSON">
+    <DisplayName>XML to JSON Policy</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <Options>
+        <RecognizeBoolean>false</RecognizeBoolean>
+        <RecognizeNumber>false</RecognizeNumber>
+        <RecognizeNull>false</RecognizeNull>
+        <NullValue>NULL</NullValue>
+        <NamespaceBlockName>#namespaces</NamespaceBlockName>
+        <DefaultNamespaceNodeName>$default</DefaultNamespaceNodeName>
+        <NamespaceSeparator>_</NamespaceSeparator>
+        <TextAlwaysAsProperty>false</TextAlwaysAsProperty>
+        <TextNodeName>#text</TextNodeName>
+        <AttributeBlockName>#attrs</AttributeBlockName>
+        <AttributePrefix>@</AttributePrefix>
+        <OutputPrefix></OutputPrefix>
+        <OutputSuffix></OutputSuffix>
+    </Options>
+    <OutputVariable>response</OutputVariable>
+    <Source>response</Source>
+</XMLToJSON>

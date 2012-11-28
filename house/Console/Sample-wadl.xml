@@ -1,0 +1,214 @@
+<application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+             xmlns:apigee="http://api.apigee.com/wadl/2010/07/" xmlns="http://wadl.dev.java.net/2009/02"
+             xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://apigee.com/schemas/wadl-schema.xsd    http://api.apigee.com/wadl/2010/07/ http://apigee.com/schemas/apigee-wadl-extensions.xsd">
+ 
+  <resources base="http://<org>-prod.apigee.net/Sample">
+	   
+	 
+	 <resource path="newword">
+		<method id="passthrough" name="GET" apigee:displayName="Passthrough for Basic User">
+			<apigee:tags>
+			<apigee:tag primary="true">Sample newword API</apigee:tag>
+			</apigee:tags>
+			<apigee:authentication required="false"/>
+			<apigee:example url="/report/demand"/>
+			<request>
+			<param name="apikey" required="true" type="xsd:string" style="query" default="apikey_basic"/>
+			<param name="param11" required="true" type="xsd:string" style="query" default="param11_default"/>
+			<param name="param12" required="true" type="xsd:string" style="query" default="param12_default"/>
+			</request>
+		</method>
+	 </resource>
+	 
+	  <resource path="newword">
+		<method id="contentBased_access" name="GET" apigee:displayName="Content based Entitlement">
+			<apigee:tags>
+			<apigee:tag primary="true">Sample newword API</apigee:tag>
+			</apigee:tags>
+			<apigee:authentication required="false"/>
+			<apigee:example url="/report/demand"/>
+			<request>
+			<param name="apikey" required="true" type="xsd:string" style="query" default="apikey_partner"/>
+			<param name="param11" required="true" type="xsd:string" style="query" default="param11_default"/>
+			<param name="param12" required="true" type="xsd:string" style="query" default="param12_default"/>
+			</request>
+		</method>
+	 </resource>
+	 
+	  <resource path="newword">
+		<method id="transformation" name="GET" apigee:displayName="Transformation to JSON">
+			<apigee:tags>
+			<apigee:tag primary="true">Sample newword API</apigee:tag>
+			</apigee:tags>
+			<apigee:authentication required="false"/>
+			<apigee:example url="/report/demand"/>
+			<request>
+			<param name="apikey" required="true" type="xsd:string" style="query" default="apikey_partner"/>
+			<param name="param11" required="true" type="xsd:string" style="query" default="param11_default"/>
+			<param name="param12" required="true" type="xsd:string" style="query" default="param12_default"/>
+			<param name="Accept" required="true" type="xsd:string" style="header" default="application/json"/>
+			</request>
+		</method>
+	 </resource>
+	 
+	  <resource path="Sample_Resource2">
+		<method id="transformation_r2" name="GET" apigee:displayName="Transformation to XML">
+			<apigee:tags>
+			<apigee:tag primary="true">Sample Sample_Resource2 API</apigee:tag>
+			</apigee:tags>
+			<apigee:authentication required="false"/>
+			<apigee:example url="/report/demand"/>
+			<request>
+			<param name="apikey" required="false" type="xsd:string" style="query" default="apikey_premium"/>
+			<param name="param21" required="true" type="xsd:string" style="query" default="param21_default"/>
+			<param name="param22" required="true" type="xsd:string" style="query" default="param22_default"/>
+			<param name="Original-Accept" required="true" type="xsd:string" style="header" default="application/xml"/>
+			</request>
+		</method>
+	 </resource>
+	 
+	   <resource path="v2/newword">
+		<method id="versioning" name="GET" apigee:displayName="Sample newword Versioning">
+			<apigee:tags>
+			<apigee:tag primary="true">Sample newword API</apigee:tag>
+			</apigee:tags>
+			<apigee:authentication required="false"/>
+			<apigee:example url="/report/demand"/>
+			<request>
+			<param name="apikey" required="true" type="xsd:string" style="query" default="apikey_partner"/>
+			<param name="param21" required="true" type="xsd:string" style="query" default="param21_default"/>
+			<param name="param22" required="true" type="xsd:string" style="query" default="param22_default"/>
+			</request>
+		</method>
+	 </resource>
+	 
+	 <resource path="Sample_Resource2">
+		<method id="passthrough__access" name="GET" apigee:displayName="Sample Sample_Resource2 Details">
+			<apigee:tags>
+			<apigee:tag primary="true">Sample Sample_Resource2 API</apigee:tag>
+			</apigee:tags>
+			<apigee:authentication required="false"/>
+			<apigee:example url="/report/demand"/>
+			<request>
+			<param name="apikey" required="false" type="xsd:string" style="query" default="apikey_premium"/>
+			<param name="param21" required="true" type="xsd:string" style="query" default="param21_default"/>
+			<param name="param22" required="true" type="xsd:string" style="query" default="param22_default"/>
+			</request>
+		</method>
+	 </resource>
+	 
+	 
+	 
+	 <resource path="Sample_Resource2">
+		<method id="threat_protection" name="GET" apigee:displayName="Sample Threat Protection">
+			<apigee:tags>
+			<apigee:tag primary="true">Sample Sample_Resource2 API</apigee:tag>
+			</apigee:tags>
+			<apigee:authentication required="false"/>
+			<apigee:example url="/report/demand"/>
+			<request>
+			<param name="apikey" required="false" type="xsd:string" style="query" default="apikey_premium"/>
+			<param name="threat" required="true" type="xsd:string" style="query" default="delete *"/>
+			<param name="param22" required="true" type="xsd:string" style="query" default="param22_default"/>
+			<param name="Original-Accept" required="true" type="xsd:string" style="header" default="application/xml"/>
+			</request>
+		</method>
+	 </resource>
+	 
+	  
+	 <resource path="v2/Sample_Resource2">
+		<method id="versioning_resource2" name="GET" apigee:displayName="Sample Sample_Resource2 Version 2">
+			<apigee:tags>
+			<apigee:tag primary="true">Sample Sample_Resource2 API</apigee:tag>
+			</apigee:tags>
+			<apigee:authentication required="false"/>
+			<apigee:example url="/report/demand"/>
+			<request>
+			<param name="apikey" required="false" type="xsd:string" style="query" default="apikey_premium"/>
+			<param name="param22" required="true" type="xsd:string" style="query" default="param22_default"/>
+			<param name="param21" required="true" type="xsd:string" style="query" default="param21_default"/>
+			</request>
+		</method>
+	 </resource>
+	
+	 <resource path="Sample_Resource2">
+		<method id="basic_access" name="GET" apigee:displayName="ResponseStripping">
+			<apigee:tags>
+			<apigee:tag primary="true">Sample Sample_Resource2 API</apigee:tag>
+			</apigee:tags>
+			<apigee:authentication required="false"/>
+			<apigee:example url="/report/demand"/>
+			<request>
+			<param name="apikey" required="true" type="xsd:string" style="query" default="apikey_basic"/>
+			<param name="param21" required="true" type="xsd:string" style="query" default="param21_default"/>
+			<param name="param22" required="true" type="xsd:string" style="query" default="param22_default"/>
+			</request>
+		</method>
+	 </resource>
+	 
+	  <resource path="Sample_Resource2">
+		<method id="premium_access" name="GET" apigee:displayName="ResponseEnrichment">
+			<apigee:tags>
+			<apigee:tag primary="true">Sample Sample_Resource2 API</apigee:tag>
+			</apigee:tags>
+			<apigee:authentication required="false"/>
+			<apigee:example url="/report/demand"/>
+			<request>
+			<param name="apikey" required="true" type="xsd:string" style="query" default="apikey_premium"/>
+			<param name="param21" required="true" type="xsd:string" style="query" default="param21_default"/>
+			<param name="param22" required="true" type="xsd:string" style="query" default="param22_default"/>
+			</request>
+		</method>
+	 </resource>
+	
+	<resource path="Sample_Resource3">
+		<method id="pagination" name="GET" apigee:displayName="Pagination">
+			<apigee:tags>
+			<apigee:tag primary="true">Mobile Optimization</apigee:tag>
+			</apigee:tags>
+			<apigee:authentication required="false"/>
+			<apigee:example url="/report/demand"/>
+			<request>
+			<param name="apikey" required="true" type="xsd:string" style="query" default="apikey_premium"/>
+			<param name="param31" required="true" type="xsd:string" style="query" default="param31_default"/>
+			<param name="param32" required="true" type="xsd:string" style="query" default="param32_default"/>
+			<param name="startIndex" required="true" type="xsd:string" style="query" default="1"/>
+			<param name="endIndex" required="true" type="xsd:string" style="query" default="5"/>
+			</request>
+		</method>
+	 </resource>
+	 
+	<resource path="Sample_Resource3">
+		<method id="compression" name="GET" apigee:displayName="Compression">
+			<apigee:tags>
+			<apigee:tag primary="true">Mobile Optimization</apigee:tag>
+			</apigee:tags>
+			<apigee:authentication required="false"/>
+			<apigee:example url="/report/demand"/>
+			<request>
+			<param name="apikey" required="true" type="xsd:string" style="query" default="apikey_premium"/>
+			<param name="param31" required="true" type="xsd:string" style="query" default="param31_default"/>
+			<param name="param32" required="true" type="xsd:string" style="query" default="param32_default"/>
+			<param name="Accept-Encoding" required="true" type="xsd:string" style="header" default="gzip"/>
+			</request>
+		</method>
+	 </resource>
+	 
+	<resource path="Sample_Resource3">
+		<method id="caching" name="GET" apigee:displayName="Caching">
+			<apigee:tags>
+			<apigee:tag primary="true">Mobile Optimization</apigee:tag>
+			</apigee:tags>
+			<apigee:authentication required="false"/>
+			<apigee:example url="/report/demand"/>
+			<request>
+			<param name="apikey" required="true" type="xsd:string" style="query" default="apikey_premium"/>
+			<param name="param31" required="true" type="xsd:string" style="query" default="param31_default"/>
+			<param name="param32" required="true" type="xsd:string" style="query" default="param32_default"/>
+			</request>
+		</method>
+	 </resource>
+	
+</resources>
+
+</application>
